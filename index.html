@@ -1,70 +1,51 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Chapters — OTK — Translated Chapters (Reader Mode)</title><style>
+<title>Chapters — OTK — Translated Chapters (Reader Mode, full 311–314)</title><style>
 :root{
   --bg:#0b0e13; --fg:#e6ebf2; --muted:#9aa6b2; --link:#8ab4ff; --card:#121722; --border:rgba(255,255,255,.08);
-  --maxw:900px;
-  --fs-base:18; /* px, will be applied via JS too */
-  --lh:1.7;
-  --font: Georgia, Cambria, "Times New Roman", Times, serif;
+  --maxw:900px; --fs-base:18; --lh:1.7; --font: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 @media (prefers-color-scheme: light){
   :root{ --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#1d4ed8; --card:#f9fafb; --border:rgba(0,0,0,.08); }
 }
 html.light{ --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#1d4ed8; --card:#f9fafb; --border:rgba(0,0,0,.08); }
-
 *{box-sizing:border-box}
-body{
-  margin:0;background:var(--bg);color:var(--fg);
-  font-family:var(--font);
-  font-size: calc(var(--fs-base) * 1px);
-  line-height: var(--lh);
-  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
-}
-.header{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--card) 85%, transparent);
-  backdrop-filter: blur(6px); border-bottom:1px solid var(--border);}
-.container{max-width:var(--maxw);margin:0 auto;padding:18px 14px;}
-h1,h2,h3{line-height:1.2;margin:.4em 0 .2em}
-h1{font-size: clamp(24px, 3.2vw, 34px)}
-h2{font-size: clamp(16px, 2vw, 18px); color: var(--muted); font-weight: 500}
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:clamp(14px,2.2vw,20px);margin:14px 0}
-a{color:var(--link);text-decoration:none}
-a:hover{text-decoration:underline}
-.meta{color:var(--muted);font-size:.96rem}
-.btn{display:inline-block;padding:9px 12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--fg);text-decoration:none}
-.btn:hover{background:color-mix(in oklab,var(--card)65%,transparent)}
-.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.kbd{background:color-mix(in oklab,var(--card)70%,transparent);padding:2px 6px;border-radius:6px;border:1px solid var(--border);font-size:.9em}
-.nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}
-.read p{margin:0 0 1em;text-wrap:pretty}
-.controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-footer{color:var(--muted);font-size:.92rem;padding:24px 16px 40px;text-align:center}
-@media (max-width:540px){
-  .btn{padding:8px 10px}
-  .nav{gap:8px}
-}
+body{ margin:0; background:var(--bg); color:var(--fg); font-family:var(--font);
+      font-size: calc(var(--fs-base) * 1px); line-height: var(--lh); }
+.header{ position:sticky; top:0; z-index:10; background:color-mix(in oklab,var(--card)85%,transparent);
+         backdrop-filter:blur(6px); border-bottom:1px solid var(--border); }
+.container{ max-width:var(--maxw); margin:0 auto; padding:18px 14px; }
+h1,h2,h3{ line-height:1.2; margin:.4em 0 .2em }
+h1{ font-size: clamp(24px, 3.2vw, 34px) }
+h2{ font-size: clamp(16px, 2vw, 18px); color: var(--muted); font-weight: 500 }
+.card{ background:var(--card); border:1px solid var(--border); border-radius:14px; padding:clamp(14px,2.2vw,20px); margin:14px 0 }
+a{ color:var(--link); text-decoration:none } a:hover{text-decoration:underline}
+.meta{ color:var(--muted); font-size:.96rem }
+.btn{ display:inline-block; padding:9px 12px; border-radius:10px; border:1px solid var(--border);
+      background:transparent; color:var(--fg); text-decoration:none }
+.btn:hover{ background:color-mix(in oklab,var(--card)65%,transparent) }
+.toolbar{ display:flex; align-items:center; gap:8px; flex-wrap:wrap }
+.nav{ display:flex; justify-content:space-between; gap:12px; margin-top:24px; flex-wrap:wrap }
+.read p{ margin:0 0 1em; text-wrap:pretty }
+footer{ color:var(--muted); font-size:.92rem; padding:24px 16px 40px; text-align:center }
+@media (max-width:540px){ .btn{padding:8px 10px} .nav{gap:8px} }
 </style></head>
 <body>
-
 <div class="header">
   <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
     <div>
-      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (Reader Mode)</h1></a>
-      <h2 style="margin:2px 0 0;">Comfortable English Translations • reader controls included</h2>
+      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (Reader Mode, full 311–314)</h1></a>
+      <h2 style="margin:2px 0 0;">Reader mode • font & spacing controls • dark/light</h2>
     </div>
     <div class="toolbar">
       <a id="themeToggle" class="btn" href="javascript:void(0)">Theme</a>
       <span class="meta">Font</span>
-      <div class="controls">
-        <a id="fsDec" class="btn" href="javascript:void(0)" title="Decrease font size">A−</a>
-        <a id="fsInc" class="btn" href="javascript:void(0)" title="Increase font size">A+</a>
-      </div>
+      <a id="fsDec" class="btn" href="javascript:void(0)">A−</a>
+      <a id="fsInc" class="btn" href="javascript:void(0)">A+</a>
       <span class="meta">Spacing</span>
-      <div class="controls">
-        <a id="lhDec" class="btn" href="javascript:void(0)" title="Decrease line spacing">−</a>
-        <a id="lhInc" class="btn" href="javascript:void(0)" title="Increase line spacing">+</a>
-      </div>
-      <a id="resetPrefs" class="btn" href="javascript:void(0)" title="Reset typography">Reset</a>
+      <a id="lhDec" class="btn" href="javascript:void(0)">−</a>
+      <a id="lhInc" class="btn" href="javascript:void(0)">+</a>
+      <a id="resetPrefs" class="btn" href="javascript:void(0)">Reset</a>
     </div>
   </div>
 </div>
@@ -72,61 +53,41 @@ footer{color:var(--muted);font-size:.92rem;padding:24px 16px 40px;text-align:cen
 <main class="container">
   <div class="card">
     <h1>Chapters</h1>
-    <p>Use the header controls to adjust <strong>font size</strong> (A−/A+) and <strong>line spacing</strong> (−/+). Your preferences are saved.</p>
+    <p>Use the header controls to adjust <strong>font size</strong> (A−/A+) and <strong>line spacing</strong> (−/+). Your preferences are saved. Dark/light available.</p>
   </div>
   <div class="card"><h3><a href="chapter-311.html">Chapter 311 — The Offer, the Crash, and a Puzzling Vision</a></h3><div class="meta">Translated • full text</div><div style="margin-top:8px;"><a class="btn" href="chapter-311.html">Read Chapter</a></div></div><div class="card"><h3><a href="chapter-312.html">Chapter 312 — Fat Finger, GPIF, and a Plan</a></h3><div class="meta">Translated • full text</div><div style="margin-top:8px;"><a class="btn" href="chapter-312.html">Read Chapter</a></div></div><div class="card"><h3><a href="chapter-313.html">Chapter 313 — The Print</a></h3><div class="meta">Translated • full text</div><div style="margin-top:8px;"><a class="btn" href="chapter-313.html">Read Chapter</a></div></div><div class="card"><h3><a href="chapter-314.html">Chapter 314 — Fallout</a></h3><div class="meta">Translated • full text</div><div style="margin-top:8px;"><a class="btn" href="chapter-314.html">Read Chapter</a></div></div>
 </main>
-
-<footer>
-  Reader controls are saved in your browser • Use the header buttons for font size & line spacing • Toggle light/dark any time.
-</footer>
-
+<footer>Use the header buttons to adjust font size & line spacing • Preferences saved in your browser.</footer>
 <script>
 (function(){
-  // Theme
   const savedTheme = localStorage.getItem('theme');
   if(savedTheme){ document.documentElement.classList.toggle('light', savedTheme==='light'); }
 
-  // Typography prefs
   const root = document.documentElement;
   const savedFS = localStorage.getItem('fs-base');
   const savedLH = localStorage.getItem('lh');
   if(savedFS){ root.style.setProperty('--fs-base', savedFS); }
   if(savedLH){ root.style.setProperty('--lh', savedLH); }
 
-  function setFS(val){
-    val = Math.max(14, Math.min(24, val)); // clamp 14–24px
-    root.style.setProperty('--fs-base', val);
-    localStorage.setItem('fs-base', String(val));
-  }
-  function setLH(val){
-    val = Math.max(1.4, Math.min(2.2, val)); // clamp 1.4–2.2
-    root.style.setProperty('--lh', val);
-    localStorage.setItem('lh', String(val));
-  }
+  function setFS(val){ val=Math.max(14,Math.min(24,val)); root.style.setProperty('--fs-base',val); localStorage.setItem('fs-base',String(val)); }
+  function setLH(val){ val=Math.max(1.4,Math.min(2.2,val)); root.style.setProperty('--lh',val); localStorage.setItem('lh',String(val)); }
 
   document.addEventListener('DOMContentLoaded',()=>{
-    // Theme toggle
-    const tog = document.getElementById('themeToggle');
+    const tog=document.getElementById('themeToggle');
     if(tog){ tog.addEventListener('click',()=>{
-      const isLight = document.documentElement.classList.toggle('light');
+      const isLight=document.documentElement.classList.toggle('light');
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });}
-
-    // Controls
-    const fsDec = document.getElementById('fsDec');
-    const fsInc = document.getElementById('fsInc');
-    const lhDec = document.getElementById('lhDec');
-    const lhInc = document.getElementById('lhInc');
-    const reset = document.getElementById('resetPrefs');
+    const fsDec=document.getElementById('fsDec'), fsInc=document.getElementById('fsInc'),
+          lhDec=document.getElementById('lhDec'), lhInc=document.getElementById('lhInc'),
+          reset=document.getElementById('resetPrefs');
     function getFS(){ return parseFloat(getComputedStyle(root).getPropertyValue('--fs-base')); }
     function getLH(){ return parseFloat(getComputedStyle(root).getPropertyValue('--lh')); }
-    if(fsDec) fsDec.addOpenListener = fsDec.addEventListener('click', ()=> setFS(getFS()-1));
+    if(fsDec) fsDec.addEventListener('click', ()=> setFS(getFS()-1));
     if(fsInc) fsInc.addEventListener('click', ()=> setFS(getFS()+1));
     if(lhDec) lhDec.addEventListener('click', ()=> setLH(getLH()-0.1));
     if(lhInc) lhInc.addEventListener('click', ()=> setLH(getLH()+0.1));
     if(reset) reset.addEventListener('click', ()=> { setFS(18); setLH(1.7); });
   });
 })();
-</script>
-</body></html>
+</script></body></html>

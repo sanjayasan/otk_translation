@@ -1,151 +1,106 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Chapter 313 — The Print — OTK — Translated Chapters (Reader Mode)</title>
-<style>
+<title>Chapter 313 — The Print — OTK — Translated Chapters (Reader Mode, full 311–314)</title><style>
 :root{
   --bg:#0b0e13; --fg:#e6ebf2; --muted:#9aa6b2; --link:#8ab4ff; --card:#121722; --border:rgba(255,255,255,.08);
-  --maxw:900px;
-  --fs-base:18; /* px, will be applied via JS too */
-  --lh:1.7;
-  --font: Georgia, Cambria, "Times New Roman", Times, serif;
+  --maxw:900px; --fs-base:18; --lh:1.7; --font: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 @media (prefers-color-scheme: light){
   :root{ --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#1d4ed8; --card:#f9fafb; --border:rgba(0,0,0,.08); }
 }
 html.light{ --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#1d4ed8; --card:#f9fafb; --border:rgba(0,0,0,.08); }
-
 *{box-sizing:border-box}
-body{
-  margin:0;background:var(--bg);color:var(--fg);
-  font-family:var(--font);
-  font-size: calc(var(--fs-base) * 1px);
-  line-height: var(--lh);
-  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
-}
-.header{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--card) 85%, transparent);
-  backdrop-filter: blur(6px); border-bottom:1px solid var(--border);}
-.container{max-width:var(--maxw);margin:0 auto;padding:18px 14px;}
-h1,h2,h3{line-height:1.2;margin:.4em 0 .2em}
-h1{font-size: clamp(24px, 3.2vw, 34px)}
-h2{font-size: clamp(16px, 2vw, 18px); color: var(--muted); font-weight: 500}
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:clamp(14px,2.2vw,20px);margin:14px 0}
-a{color:var(--link);text-decoration:none}
-a:hover{text-decoration:underline}
-.meta{color:var(--muted);font-size:.96rem}
-.btn{display:inline-block;padding:9px 12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--fg);text-decoration:none}
-.btn:hover{background:color-mix(in oklab,var(--card)65%,transparent)}
-.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.kbd{background:color-mix(in oklab,var(--card)70%,transparent);padding:2px 6px;border-radius:6px;border:1px solid var(--border);font-size:.9em}
-.nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}
-.read p{margin:0 0 1em;text-wrap:pretty}
-.controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-footer{color:var(--muted);font-size:.92rem;padding:24px 16px 40px;text-align:center}
-@media (max-width:540px){
-  .btn{padding:8px 10px}
-  .nav{gap:8px}
-}
+body{ margin:0; background:var(--bg); color:var(--fg); font-family:var(--font);
+      font-size: calc(var(--fs-base) * 1px); line-height: var(--lh); }
+.header{ position:sticky; top:0; z-index:10; background:color-mix(in oklab,var(--card)85%,transparent);
+         backdrop-filter:blur(6px); border-bottom:1px solid var(--border); }
+.container{ max-width:var(--maxw); margin:0 auto; padding:18px 14px; }
+h1,h2,h3{ line-height:1.2; margin:.4em 0 .2em }
+h1{ font-size: clamp(24px, 3.2vw, 34px) }
+h2{ font-size: clamp(16px, 2vw, 18px); color: var(--muted); font-weight: 500 }
+.card{ background:var(--card); border:1px solid var(--border); border-radius:14px; padding:clamp(14px,2.2vw,20px); margin:14px 0 }
+a{ color:var(--link); text-decoration:none } a:hover{text-decoration:underline}
+.meta{ color:var(--muted); font-size:.96rem }
+.btn{ display:inline-block; padding:9px 12px; border-radius:10px; border:1px solid var(--border);
+      background:transparent; color:var(--fg); text-decoration:none }
+.btn:hover{ background:color-mix(in oklab,var(--card)65%,transparent) }
+.toolbar{ display:flex; align-items:center; gap:8px; flex-wrap:wrap }
+.nav{ display:flex; justify-content:space-between; gap:12px; margin-top:24px; flex-wrap:wrap }
+.read p{ margin:0 0 1em; text-wrap:pretty }
+footer{ color:var(--muted); font-size:.92rem; padding:24px 16px 40px; text-align:center }
+@media (max-width:540px){ .btn{padding:8px 10px} .nav{gap:8px} }
 </style></head>
 <body>
-
 <div class="header">
   <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
     <div>
-      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (Reader Mode)</h1></a>
-      <h2 style="margin:2px 0 0;">Comfortable English Translations • reader controls included</h2>
+      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (Reader Mode, full 311–314)</h1></a>
+      <h2 style="margin:2px 0 0;">Reader mode • font & spacing controls • dark/light</h2>
     </div>
     <div class="toolbar">
       <a id="themeToggle" class="btn" href="javascript:void(0)">Theme</a>
       <span class="meta">Font</span>
-      <div class="controls">
-        <a id="fsDec" class="btn" href="javascript:void(0)" title="Decrease font size">A−</a>
-        <a id="fsInc" class="btn" href="javascript:void(0)" title="Increase font size">A+</a>
-      </div>
+      <a id="fsDec" class="btn" href="javascript:void(0)">A−</a>
+      <a id="fsInc" class="btn" href="javascript:void(0)">A+</a>
       <span class="meta">Spacing</span>
-      <div class="controls">
-        <a id="lhDec" class="btn" href="javascript:void(0)" title="Decrease line spacing">−</a>
-        <a id="lhInc" class="btn" href="javascript:void(0)" title="Increase line spacing">+</a>
-      </div>
-      <a id="resetPrefs" class="btn" href="javascript:void(0)" title="Reset typography">Reset</a>
+      <a id="lhDec" class="btn" href="javascript:void(0)">−</a>
+      <a id="lhInc" class="btn" href="javascript:void(0)">+</a>
+      <a id="resetPrefs" class="btn" href="javascript:void(0)">Reset</a>
     </div>
   </div>
 </div>
 
-<main class="container">
-  <div class="card read">
-    <div class="nav"><a class="btn" href="index.html">← Back to Chapters</a><span></span></div>
-    <h1 style="margin-top:.2em">Chapter 313 — The Print</h1>
-    <p>Nishida trader **Kimura Sugihara** fought sleep, juggling the pension book with retail flow. Coffee: empty. Staff: short. Safeguards: off. Approvals: trimmed in the name of “efficiency.”</p>
-<p>He keyed in sells; a supervisor green‑lit. Then a cascade—resting bids vanished, and the unthinkable printed:</p>
-<p>**14,970,000 shares of Toyota at 1 yen.**</p>
-<p>The Nikkei flipped from green to **−4.3%** in a heartbeat.</p>
-<p>“W‑wait!” Kimura slammed Cancel. Too late. The position was gone. He stared at the log. Lines of small fills, then the monstrous one at the end. His chief grabbed his shoulders. “What did you do?”</p>
+<main class="container"><div class="card read">
+<div class="nav"><a class="btn" href="index.html">← Back to Chapters</a><span></span></div>
+<h1 style="margin-top:.2em">Chapter 313 — The Print</h1>
+<p>Nishida’s trader **Kimura Sugihara** juggled three monitors and endless orders. He reached for coffee—empty. Headcount had been cut “for efficiency.” Safeguards suspended for a server check hadn’t been re‑enabled. The five‑step approval flow had been trimmed to three—then failed.</p>
+<p>He keyed: retail buys, J-Com sell at 3,250, ManoTel, and—back to the GPIF account. Toyota: ¥151,300. A thousand more to sell before the bell.</p>
+<p>He yawned, entered a marketable order. It got approved. Then a strange thing: the resting bid stack *below* the last trade vanished in one go, and fills fired at **¥1**.</p>
+<p>“W‑wait!” He smashed Cancel in under a second, but the log showed a torrent of small fills—then the monster: **14,970,000 at ¥1**.</p>
+<p>His chief shook him. “What did you do?” Kimura’s mouth went dry. “I… think I made a mistake.”</p>
+<p>The Nikkei, up earlier, was now down **4.3%**.</p>
 <p>* * *</p>
-<p>We’d watched all day. I’d been gone for sixty seconds.</p>
-<p>I burst from the bathroom. “What happened?”<br>
-Taek‑gyu just pointed.</p>
-<p>Our account now held **14,970,000** shares of Toyota.</p>
-<p>We stared, then howled. Cost: **14.97 million yen**. Instant mark‑to‑market: over **200 million yen**. Return: **15,000,000%**.</p>
-<p>TV banners rolled: *Breaking—Nikkei plunges; order error suspected.*</p>
-<p>Golden Gate’s Japan desk rang Korea: the **Korea** branch had taken the block. Hyun‑joo pulled up our account, went white, then bellowed: “OH TAEK‑GYU!”</p>
-<p>* * *</p>
-<p>In Tokyo, Prime Minister Okazaki met China’s Commerce Minister Li Su‑wei. A deputy whispered the news: a mistaken order had evaporated roughly ten percent of Toyota.</p>
-<p>“Buyer?”<br>
-“Not confirmed—likely OTK Company.”<br>
-Li set down his tea. “I’ll return to Beijing,” he said. “Do you really think the Prime Minister can continue the meeting like this?”</p>
-    <div class="nav"><a class="btn" href="chapter-312.html">← Chapter 312 — Fat Finger, GPIF, and a Plan</a><a class="btn" href="chapter-314.html">Chapter 314 — Fallout →</a></div>
-  </div>
-</main>
-
-<footer>
-  Reader controls are saved in your browser • Use the header buttons for font size & line spacing • Toggle light/dark any time.
-</footer>
-
+<p>We stared at the screen all day. With less than twenty minutes to go, I ran to the bathroom. I was gone for a minute—two at most.</p>
+<p>A scream. I bolted back. Taek‑gyu, eyes round as saucers, just pointed.</p>
+<p>Our account now held **14,970,000** Toyota shares.</p>
+<p>We looked at each other—then yelled. Cost: **¥14,970,000**. Instant PnL: well over **¥200,000,000**. Return: **15,000,000%**.</p>
+<p>The TV flashed: (Breaking) Nikkei plunges—order error suspected!</p>
+<p>Golden Gate’s Japan desk called Korea in a panic. Korea had swept the block. Hyun‑joo pulled up our account, went pale, then roared: “OH TAEK‑GYU!”</p>
+<p>Tokyo’s Prime Minister’s Office. Okazaki was meeting China’s Commerce Minister Li Su‑wei. A deputy whispered in his ear: a fat finger had effectively erased ten percent of Toyota; buyer unknown. Minutes later: “Likely OTK Company.”</p>
+<p>Li set down his tea. “I’ll return to Beijing,” he said. “You won’t be focusing on this meeting anyway.”</p>
+<div class="nav"><a class="btn" href="chapter-312.html">← Chapter 312 — Fat Finger, GPIF, and a Plan</a><a class="btn" href="chapter-314.html">Chapter 314 — Fallout →</a></div>
+</div></main>
+<footer>Use the header buttons to adjust font size & line spacing • Preferences saved in your browser.</footer>
 <script>
 (function(){
-  // Theme
   const savedTheme = localStorage.getItem('theme');
   if(savedTheme){ document.documentElement.classList.toggle('light', savedTheme==='light'); }
 
-  // Typography prefs
   const root = document.documentElement;
   const savedFS = localStorage.getItem('fs-base');
   const savedLH = localStorage.getItem('lh');
   if(savedFS){ root.style.setProperty('--fs-base', savedFS); }
   if(savedLH){ root.style.setProperty('--lh', savedLH); }
 
-  function setFS(val){
-    val = Math.max(14, Math.min(24, val)); // clamp 14–24px
-    root.style.setProperty('--fs-base', val);
-    localStorage.setItem('fs-base', String(val));
-  }
-  function setLH(val){
-    val = Math.max(1.4, Math.min(2.2, val)); // clamp 1.4–2.2
-    root.style.setProperty('--lh', val);
-    localStorage.setItem('lh', String(val));
-  }
+  function setFS(val){ val=Math.max(14,Math.min(24,val)); root.style.setProperty('--fs-base',val); localStorage.setItem('fs-base',String(val)); }
+  function setLH(val){ val=Math.max(1.4,Math.min(2.2,val)); root.style.setProperty('--lh',val); localStorage.setItem('lh',String(val)); }
 
   document.addEventListener('DOMContentLoaded',()=>{
-    // Theme toggle
-    const tog = document.getElementById('themeToggle');
+    const tog=document.getElementById('themeToggle');
     if(tog){ tog.addEventListener('click',()=>{
-      const isLight = document.documentElement.classList.toggle('light');
+      const isLight=document.documentElement.classList.toggle('light');
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });}
-
-    // Controls
-    const fsDec = document.getElementById('fsDec');
-    const fsInc = document.getElementById('fsInc');
-    const lhDec = document.getElementById('lhDec');
-    const lhInc = document.getElementById('lhInc');
-    const reset = document.getElementById('resetPrefs');
+    const fsDec=document.getElementById('fsDec'), fsInc=document.getElementById('fsInc'),
+          lhDec=document.getElementById('lhDec'), lhInc=document.getElementById('lhInc'),
+          reset=document.getElementById('resetPrefs');
     function getFS(){ return parseFloat(getComputedStyle(root).getPropertyValue('--fs-base')); }
     function getLH(){ return parseFloat(getComputedStyle(root).getPropertyValue('--lh')); }
-    if(fsDec) fsDec.addOpenListener = fsDec.addEventListener('click', ()=> setFS(getFS()-1));
+    if(fsDec) fsDec.addEventListener('click', ()=> setFS(getFS()-1));
     if(fsInc) fsInc.addEventListener('click', ()=> setFS(getFS()+1));
     if(lhDec) lhDec.addEventListener('click', ()=> setLH(getLH()-0.1));
     if(lhInc) lhInc.addEventListener('click', ()=> setLH(getLH()+0.1));
     if(reset) reset.addEventListener('click', ()=> { setFS(18); setLH(1.7); });
   });
 })();
-</script>
-</body></html>
+</script></body></html>

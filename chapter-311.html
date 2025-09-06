@@ -1,169 +1,142 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Chapter 311 — The Offer, the Crash, and a Puzzling Vision — OTK — Translated Chapters (Reader Mode)</title>
-<style>
+<title>Chapter 311 — The Offer, the Crash, and a Puzzling Vision — OTK — Translated Chapters (Reader Mode, full 311–314)</title><style>
 :root{
   --bg:#0b0e13; --fg:#e6ebf2; --muted:#9aa6b2; --link:#8ab4ff; --card:#121722; --border:rgba(255,255,255,.08);
-  --maxw:900px;
-  --fs-base:18; /* px, will be applied via JS too */
-  --lh:1.7;
-  --font: Georgia, Cambria, "Times New Roman", Times, serif;
+  --maxw:900px; --fs-base:18; --lh:1.7; --font: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 @media (prefers-color-scheme: light){
   :root{ --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#1d4ed8; --card:#f9fafb; --border:rgba(0,0,0,.08); }
 }
 html.light{ --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#1d4ed8; --card:#f9fafb; --border:rgba(0,0,0,.08); }
-
 *{box-sizing:border-box}
-body{
-  margin:0;background:var(--bg);color:var(--fg);
-  font-family:var(--font);
-  font-size: calc(var(--fs-base) * 1px);
-  line-height: var(--lh);
-  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
-}
-.header{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--card) 85%, transparent);
-  backdrop-filter: blur(6px); border-bottom:1px solid var(--border);}
-.container{max-width:var(--maxw);margin:0 auto;padding:18px 14px;}
-h1,h2,h3{line-height:1.2;margin:.4em 0 .2em}
-h1{font-size: clamp(24px, 3.2vw, 34px)}
-h2{font-size: clamp(16px, 2vw, 18px); color: var(--muted); font-weight: 500}
-.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:clamp(14px,2.2vw,20px);margin:14px 0}
-a{color:var(--link);text-decoration:none}
-a:hover{text-decoration:underline}
-.meta{color:var(--muted);font-size:.96rem}
-.btn{display:inline-block;padding:9px 12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--fg);text-decoration:none}
-.btn:hover{background:color-mix(in oklab,var(--card)65%,transparent)}
-.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.kbd{background:color-mix(in oklab,var(--card)70%,transparent);padding:2px 6px;border-radius:6px;border:1px solid var(--border);font-size:.9em}
-.nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}
-.read p{margin:0 0 1em;text-wrap:pretty}
-.controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-footer{color:var(--muted);font-size:.92rem;padding:24px 16px 40px;text-align:center}
-@media (max-width:540px){
-  .btn{padding:8px 10px}
-  .nav{gap:8px}
-}
+body{ margin:0; background:var(--bg); color:var(--fg); font-family:var(--font);
+      font-size: calc(var(--fs-base) * 1px); line-height: var(--lh); }
+.header{ position:sticky; top:0; z-index:10; background:color-mix(in oklab,var(--card)85%,transparent);
+         backdrop-filter:blur(6px); border-bottom:1px solid var(--border); }
+.container{ max-width:var(--maxw); margin:0 auto; padding:18px 14px; }
+h1,h2,h3{ line-height:1.2; margin:.4em 0 .2em }
+h1{ font-size: clamp(24px, 3.2vw, 34px) }
+h2{ font-size: clamp(16px, 2vw, 18px); color: var(--muted); font-weight: 500 }
+.card{ background:var(--card); border:1px solid var(--border); border-radius:14px; padding:clamp(14px,2.2vw,20px); margin:14px 0 }
+a{ color:var(--link); text-decoration:none } a:hover{text-decoration:underline}
+.meta{ color:var(--muted); font-size:.96rem }
+.btn{ display:inline-block; padding:9px 12px; border-radius:10px; border:1px solid var(--border);
+      background:transparent; color:var(--fg); text-decoration:none }
+.btn:hover{ background:color-mix(in oklab,var(--card)65%,transparent) }
+.toolbar{ display:flex; align-items:center; gap:8px; flex-wrap:wrap }
+.nav{ display:flex; justify-content:space-between; gap:12px; margin-top:24px; flex-wrap:wrap }
+.read p{ margin:0 0 1em; text-wrap:pretty }
+footer{ color:var(--muted); font-size:.92rem; padding:24px 16px 40px; text-align:center }
+@media (max-width:540px){ .btn{padding:8px 10px} .nav{gap:8px} }
 </style></head>
 <body>
-
 <div class="header">
   <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
     <div>
-      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (Reader Mode)</h1></a>
-      <h2 style="margin:2px 0 0;">Comfortable English Translations • reader controls included</h2>
+      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (Reader Mode, full 311–314)</h1></a>
+      <h2 style="margin:2px 0 0;">Reader mode • font & spacing controls • dark/light</h2>
     </div>
     <div class="toolbar">
       <a id="themeToggle" class="btn" href="javascript:void(0)">Theme</a>
       <span class="meta">Font</span>
-      <div class="controls">
-        <a id="fsDec" class="btn" href="javascript:void(0)" title="Decrease font size">A−</a>
-        <a id="fsInc" class="btn" href="javascript:void(0)" title="Increase font size">A+</a>
-      </div>
+      <a id="fsDec" class="btn" href="javascript:void(0)">A−</a>
+      <a id="fsInc" class="btn" href="javascript:void(0)">A+</a>
       <span class="meta">Spacing</span>
-      <div class="controls">
-        <a id="lhDec" class="btn" href="javascript:void(0)" title="Decrease line spacing">−</a>
-        <a id="lhInc" class="btn" href="javascript:void(0)" title="Increase line spacing">+</a>
-      </div>
-      <a id="resetPrefs" class="btn" href="javascript:void(0)" title="Reset typography">Reset</a>
+      <a id="lhDec" class="btn" href="javascript:void(0)">−</a>
+      <a id="lhInc" class="btn" href="javascript:void(0)">+</a>
+      <a id="resetPrefs" class="btn" href="javascript:void(0)">Reset</a>
     </div>
   </div>
 </div>
 
-<main class="container">
-  <div class="card read">
-    <div class="nav"><a class="btn" href="index.html">← Back to Chapters</a><span></span></div>
-    <h1 style="margin-top:.2em">Chapter 311 — The Offer, the Crash, and a Puzzling Vision</h1>
-    <p>Ellie tilted her head at my question.<br>
-“Well… it’s such a sudden proposal, I don’t know what to say.”</p>
-<p>After finishing her meal, Hyun‑joo noona explained while chewing nicotine gum instead of lighting a cigarette.<br>
-“Originally, we were about to sign with Catherine Tyler, the Hollywood actress. Everything was nearly finalized. But then the president saw Ellie, got completely smitten, and changed his mind.”</p>
-<p>Apparently, top domestic stars and Hollywood names command similar fees for commercials.</p>
-<p>I looked at Taek‑gyu. “What do you think?”<br>
-He blinked. “Why are you asking me?”<br>
-“I dunno. Lately you’ve been on a roll.”</p>
-<p>I asked Hyun‑joo, “If Ellie accepts, does Golden Gate get the IPO lead?”<br>
-“Most likely. Their terms and ours aren’t far apart.”<br>
-“If the offering is 300 billion won, the fee alone is big.”<br>
-“We’re taking warrants instead of fees.”<br>
+<main class="container"><div class="card read">
+<div class="nav"><a class="btn" href="index.html">← Back to Chapters</a><span></span></div>
+<h1 style="margin-top:.2em">Chapter 311 — The Offer, the Crash, and a Puzzling Vision</h1>
+<p>Ellie tilted her head at my question.<br>
+“Well… it’s so out of the blue.”</p>
+<p>After dinner, Hyun‑joo noona explained, chewing nicotine gum instead of lighting a cigarette.<br>
+“We were about to sign Hollywood star Catherine Tyler as the model. Contract was inches away. Then the president saw Ellie, fell head over heels, and switched.”</p>
+<p>She added that, for CFs, top Korean actors and Hollywood names command roughly similar fees.</p>
+<p>I glanced at Taek‑gyu. “What do you think?”<br>
+“Why ask me?”<br>
+“Because lately you’ve been freakishly good at calling things.”</p>
+<p>To Hyun‑joo: “If Ellie says yes, does Golden Gate get selected as IPO lead?”<br>
+“Most likely. Terms are comparable either way.”<br>
+“If the deal size is 300 billion won, even the fee is chunky.”<br>
+“We’re taking it in warrants instead.”<br>
 “At the offer price?”<br>
 “At the offer price.”</p>
-<p>It saves the company cash; the bank makes more if the stock rises. “And if it drops below the offer?” she smirked. “Then we chalk it up to charity.”</p>
-<p>Ellie said, “I think it’s still worth doing. It’s a big fish in a quiet IPO market.”</p>
-<p>She liked sports and diving; the brand fit. “As long as it’s not a bikini shoot—”<br>
-“No worries,” Hyun‑joo said. “That’s not their main product.”<br>
-Ellie hesitated. “I don’t know if I’d be good. But part of me wants to leave pretty photos while I’m still young.”</p>
-<p>In the end she accepted, and Golden Gate Korea beat KYB to become Vester’s underwriter.</p>
+<p>That saves the issuer cash; the bank makes more if post‑IPO price rises. “And if it drops?” she shrugged. “Then we basically did it for free.”<br>
+She said that, but if they’d truly expected a flop they wouldn’t structure it this way; odds favored a rise.</p>
+<p>“We’re fine either way,” she said. “It’s not like we’re desperate.”<br>
+Ellie said, “Still, I think it’s worth doing. In the IPO market, this is a rare big catch.”</p>
+<p>Ellie likes sports—she even dives. The brand fit. “As long as it’s not a bikini shoot, right?”<br>
+“No need to worry,” Hyun‑joo said. “Bikinis aren’t their main product.”<br>
+Ellie hesitated. “I don’t know if I’ll do well. But part of me wants some pretty photos while I’m still young.”</p>
+<p>She accepted. Golden Gate Korea beat KYB to become Vester’s underwriter.</p>
 <p>* * *</p>
-<p>After Christmas, year‑end season began—but the vibe was grim. Domestic demand was weak, the news bleaker. The biggest issue: Korea–Japan relations.</p>
-<p>Seoul scrapped the comfort‑women deal, and Korea’s Supreme Court held Japanese firms liable for forced labor. Tokyo erupted. Foreign Minister Okamoto thundered that treaties were “final” and “irreversible,” and threatened retaliation.</p>
-<p>Currency‑swap talks froze amid insults. “Korea breaks treaties whenever it likes,” the finance minister sneered.</p>
-<p>Then an incident: 2:30 a.m. in Chicago, a drunk Japanese student, Yoshizawa Masao, darted into traffic. An AD1 in autonomous mode braked and swerved, but hit him. He died en route to the hospital.</p>
-<p>The car had a green light and was cruising steadily. The insurer placed 100% fault on the pedestrian. It should have ended there—but Japanese media made it a referendum on autonomy.</p>
-<p>Toyota’s chairman declared, “Imperfect technology is a lethal weapon.” In the U.S., testers replicated the event: even knowing a person would dash out, it was unavoidable. The released dashcam convinced most viewers.</p>
-<p>Yet the Japanese government demanded Karos release data and algorithms.</p>
-<p>As we debated a response, a vision flashed before my eyes.</p>
+<p>Post‑Christmas, companies slid into year‑end mode, but the mood wasn’t festive. Domestic demand was soggy; the headlines, gloomier. The hottest topic was Korea–Japan relations.</p>
+<p>Seoul scrapped the comfort‑women deal from the Park administration. Korea’s Supreme Court ruled that Japanese firms bore liability for forced‑labor victims. Tokyo fumed. Foreign Minister Okamoto declared the treaty “final and irreversible,” threatened that Japan would not tolerate Korea’s “unilateral breach,” and warned of “strong measures” if Japanese firms were sanctioned.</p>
+<p>It leaked into economics. Currency‑swap restart talks stalled amid insults. “Korea rips up treaties as easy as lunch,” Finance Minister Matsukata scoffed. “Who’d lend them money? We don’t need to extend favors only to Korea.” Talks froze.</p>
+<p>A currency swap lets two countries exchange currencies at a set rate for a time. For Korea, access to yen—considered a safe quasi‑reserve currency—boosts confidence, like expanding FX reserves. Japan doesn’t exactly need won, but stable won is good for Japan: a won crash would goose Korea’s export competitiveness, overlapping with Japan’s. Stabilizing the won helps Japan too.</p>
+<p>But Korea wasn’t begging: domestic demand was weak, yet the current account hit record highs every quarter and FX reserves were ample. If anything, the won was too strong.</p>
+<p>Japanese politicians took turns flogging Korea; now and then the old claim over Dokdo popped up. It helped the cabinet’s approval rating. Prime Minister Okazaki’s numbers were sagging under scandals and gaffes, but after the anti‑Korea push they bounced back sharply.</p>
+<p>Then, an incident.</p>
+<p>2:30 a.m., a road in Chicago. A man in black suddenly ran out. The car—an AD1, autonomous mode engaged—braked and swerved, but a collision was unavoidable. 911 arrived quickly, but the man died en route.</p>
+<p>He was Yoshizawa Masao, a Japanese student. He was drunk; his friends couldn’t stop him from bolting into the road. The car had a green light and kept to the limit. The insurer placed 100% fault on the pedestrian.</p>
+<p>It should have ended as one of many tragic traffic accidents. But Japanese politics and media turned it into a referendum on Karos’s autonomy.</p>
+<p>The foreign minister blasted us. Toyota’s chairman said, “Imperfect technology is a lethal weapon.”</p>
+<p>In the U.S., reactions were mainly: *this was unavoidable.* The popular car show &lt;i&gt;Top Motor&lt;/i&gt; recreated the scenario. Even *knowing* someone would jump out, you couldn’t stop in time. People who watched the dashcam agreed:</p>
+<p>– Is that a person or a deer?<br>
+– How do you avoid that?<br>
+– Even Michael Schumacher couldn’t.<br>
+– Tragic, but not an autonomy failure.<br>
+– Why is Okazaki losing his mind?<br>
+– If you’re drunk and jump into traffic, what exactly are they investigating?</p>
+<p>Japan demanded we disclose complete driving data and even our algorithms.</p>
+<p>While Daryl and I debated how to respond, something flashed before my eyes.</p>
 <p>When I came to, Taek‑gyu was staring. “What did the foresight say?”<br>
-“OTK will acquire 14,970,000 Toyota shares for 14,970,000 yen.”<br>
-“How many shares does Toyota have outstanding?”</p>
-<p>I checked: 149,582,550. If we bought 14.97 million, that was over 10%—the top shareholder, instantly.</p>
-<p>But how could ten percent cost only 14.97 million *yen*? About 170 million won?</p>
-<p>“…Unless it’s a typo,” he said.</p>
-<p>And the word came to me: “Fat finger.”</p>
-    <div class="nav"><span></span><a class="btn" href="chapter-312.html">Chapter 312 — Fat Finger, GPIF, and a Plan →</a></div>
-  </div>
-</main>
-
-<footer>
-  Reader controls are saved in your browser • Use the header buttons for font size & line spacing • Toggle light/dark any time.
-</footer>
-
+“OTK will acquire fourteen million nine hundred seventy thousand shares of Toyota for fourteen million nine hundred seventy thousand yen.”<br>
+“How many shares outstanding?”</p>
+<p>I checked on my phone. 149,582,550. If OTK acquired 14.97 million, that was over ten percent—top shareholder, instantly.</p>
+<p>But the price: 14.97 million *yen*—about 170 million won—for ten percent?</p>
+<p>“…Unless you misread the zeros,” Taek‑gyu said.<br>
+I shook my head. “No.” It was exactly what I saw.</p>
+<p>Then it hit me. I snapped my fingers. “Fat finger.”</p>
+<div class="nav"><span></span><a class="btn" href="chapter-312.html">Chapter 312 — Fat Finger, GPIF, and a Plan →</a></div>
+</div></main>
+<footer>Use the header buttons to adjust font size & line spacing • Preferences saved in your browser.</footer>
 <script>
 (function(){
-  // Theme
   const savedTheme = localStorage.getItem('theme');
   if(savedTheme){ document.documentElement.classList.toggle('light', savedTheme==='light'); }
 
-  // Typography prefs
   const root = document.documentElement;
   const savedFS = localStorage.getItem('fs-base');
   const savedLH = localStorage.getItem('lh');
   if(savedFS){ root.style.setProperty('--fs-base', savedFS); }
   if(savedLH){ root.style.setProperty('--lh', savedLH); }
 
-  function setFS(val){
-    val = Math.max(14, Math.min(24, val)); // clamp 14–24px
-    root.style.setProperty('--fs-base', val);
-    localStorage.setItem('fs-base', String(val));
-  }
-  function setLH(val){
-    val = Math.max(1.4, Math.min(2.2, val)); // clamp 1.4–2.2
-    root.style.setProperty('--lh', val);
-    localStorage.setItem('lh', String(val));
-  }
+  function setFS(val){ val=Math.max(14,Math.min(24,val)); root.style.setProperty('--fs-base',val); localStorage.setItem('fs-base',String(val)); }
+  function setLH(val){ val=Math.max(1.4,Math.min(2.2,val)); root.style.setProperty('--lh',val); localStorage.setItem('lh',String(val)); }
 
   document.addEventListener('DOMContentLoaded',()=>{
-    // Theme toggle
-    const tog = document.getElementById('themeToggle');
+    const tog=document.getElementById('themeToggle');
     if(tog){ tog.addEventListener('click',()=>{
-      const isLight = document.documentElement.classList.toggle('light');
+      const isLight=document.documentElement.classList.toggle('light');
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });}
-
-    // Controls
-    const fsDec = document.getElementById('fsDec');
-    const fsInc = document.getElementById('fsInc');
-    const lhDec = document.getElementById('lhDec');
-    const lhInc = document.getElementById('lhInc');
-    const reset = document.getElementById('resetPrefs');
+    const fsDec=document.getElementById('fsDec'), fsInc=document.getElementById('fsInc'),
+          lhDec=document.getElementById('lhDec'), lhInc=document.getElementById('lhInc'),
+          reset=document.getElementById('resetPrefs');
     function getFS(){ return parseFloat(getComputedStyle(root).getPropertyValue('--fs-base')); }
     function getLH(){ return parseFloat(getComputedStyle(root).getPropertyValue('--lh')); }
-    if(fsDec) fsDec.addOpenListener = fsDec.addEventListener('click', ()=> setFS(getFS()-1));
+    if(fsDec) fsDec.addEventListener('click', ()=> setFS(getFS()-1));
     if(fsInc) fsInc.addEventListener('click', ()=> setFS(getFS()+1));
     if(lhDec) lhDec.addEventListener('click', ()=> setLH(getLH()-0.1));
     if(lhInc) lhInc.addEventListener('click', ()=> setLH(getLH()+0.1));
     if(reset) reset.addEventListener('click', ()=> { setFS(18); setLH(1.7); });
   });
 })();
-</script>
-</body></html>
+</script></body></html>
