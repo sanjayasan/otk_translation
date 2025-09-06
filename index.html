@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Chapters — OTK — Translated Chapters (from 311)</title><style>
+:root {
+  --bg: #0b0e13;
+  --fg: #e6ebf2;
+  --muted: #9aa6b2;
+  --link: #8ab4ff;
+  --card: #121722;
+  --accent: #7dd3fc;
+  --maxw: 860px;
+  --font: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --radius: 14px;
+  --border: rgba(255,255,255,.08);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --fg: #111827;
+    --muted: #6b7280;
+    --link: #1d4ed8;
+    --card: #f9fafb;
+    --border: rgba(0,0,0,.08);
+  }
+}
+html.light {
+  --bg: #ffffff;
+  --fg: #111827;
+  --muted: #6b7280;
+  --link: #1d4ed8;
+  --card: #f9fafb;
+  --border: rgba(0,0,0,.08);
+}
+*{box-sizing:border-box;}
+body{margin:0;padding:0;background:var(--bg);color:var(--fg);
+  font-family:var(--font);line-height:1.7;font-size:clamp(17px,1.8vw,19px);}
+.header{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--card)85%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--border);}
+.container{max-width:var(--maxw);margin:0 auto;padding:18px 14px;}
+h1,h2,h3{line-height:1.2;margin:.4em 0 .2em;}
+h1{font-size:clamp(24px,3vw,32px);}
+h2{font-size:clamp(16px,2vw,18px);color:var(--muted);font-weight:500;}
+a{color:var(--link);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.card{background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:clamp(14px,2.5vw,18px);margin:14px 0;}
+.meta{color:var(--muted);font-size:.95rem;}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);
+  background:transparent;color:var(--fg);text-decoration:none;}
+.btn:hover{background:color-mix(in oklab,var(--card)60%,transparent);}
+.toolbar{display:flex;align-items:center;gap:10px;}
+footer{color:var(--muted);font-size:.9rem;padding:24px 16px 40px;text-align:center;}
+p{margin:0 0 1em;}
+hr{border:none;border-top:1px solid var(--border);margin:24px 0;}
+</style></head>
+<body>
+<div class="header">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+    <div>
+      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (from 311)</h1></a>
+      <h2 style="margin:2px 0 0;">Comfortable English Translations • starting at Chapter 311</h2>
+    </div>
+    <div class="toolbar"><a id="themeToggle" class="btn" href="javascript:void(0)">Toggle Theme</a></div>
+  </div>
+</div>
+
+<main class="container read"><div class="card"><h1>Chapters</h1>
+<p>Reading order starts at <strong>Chapter 311</strong>.</p></div><div class="card"><h3><a href="chapter-311.html">Chapter 311 — The Offer, the Crash, and a Puzzling Vision</a></h3><div class="meta">Translated</div><div><a class="btn" href="chapter-311.html">Read Chapter</a></div></div><div class="card"><h3><a href="chapter-312.html">Chapter 312 — Fat Finger, GPIF, and a Plan</a></h3><div class="meta">Translated</div><div><a class="btn" href="chapter-312.html">Read Chapter</a></div></div><div class="card"><h3><a href="chapter-313.html">Chapter 313 — The Print</a></h3><div class="meta">Translated</div><div><a class="btn" href="chapter-313.html">Read Chapter</a></div></div><div class="card"><h3><a href="chapter-314.html">Chapter 314 — Fallout</a></h3><div class="meta">Translated</div><div><a class="btn" href="chapter-314.html">Read Chapter</a></div></div></main>
+
+<footer>Built for comfortable reading on phone & desktop • Toggle light/dark in the header.<br>
+New chapter numbers will continue from 311 upward.</footer>
+<script>
+(function(){
+  const saved = localStorage.getItem('theme');
+  if(saved){ document.documentElement.classList.toggle('light', saved==='light'); }
+  document.addEventListener('DOMContentLoaded',()=>{
+    const t=document.getElementById('themeToggle'); if(!t)return;
+    t.addEventListener('click',()=>{
+      const isLight=document.documentElement.classList.toggle('light');
+      localStorage.setItem('theme',isLight?'light':'dark');
+    });
+  });
+})();
+</script></body></html>
