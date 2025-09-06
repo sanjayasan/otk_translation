@@ -1,0 +1,134 @@
+name: Add Chapter from Issue
+
+on:
+  issues:
+    types: [opened, edited, reopened, labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  add-chapter:
+    # Only run when the issue has the 'chapter' label
+    if: contains(github.event.issue.labels.*.name, 'chapter')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install markdown converter
+        run: |
+          python -m pip install --upgrade pip
+          pip install markdown==3.6
+
+      - name: Generate chapter & update site
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          python - << 'PY'
+          import os, re, pathlib, markdown
+
+          root = pathlib.Path(".")
+
+          title = os.environ["ISSUE_TITLE"].strip()
+          body_raw = os.environ.get("ISSUE_BODY","").strip()
+
+          # Decide if body is already HTML; if not, treat it as Markdown (also works for plain text)
+          looks_html = ("<p" in body_raw) or ("<div" in body_raw) or ("<br" in body_raw) or ("</" in body_raw)
+          if looks_html:
+              body_html = body_raw
+          else:
+              # Convert Markdown -> HTML (paragraphs, bold, italics, lists, etc.)
+              body_html = markdown.markdown(body_raw, extensions=['extra', 'sane_lists'])
+
+          # Find current chapter files and determine next chapter number
+          nums = []
+          for p in root.glob("chapter-*.html"):
+              m = re.match(r"chapter-(\\d+)\\.html$", p.name)
+              if m: nums.append(int(m.group(1)))
+          next_num = max(nums)+1 if nums else 311
+          new_slug = f"chapter-{next_num}.html"
+          prev_num = max(nums) if nums else None
+          prev_slug = f"chapter-{prev_num}.html" if prev_num else None
+
+          # Load index.html to grab the site's shell (header/footer)
+          idx = (root/"index.html").read_text(encoding="utf-8")
+
+          # Split around <main>…</main> to reuse the theme shell
+          parts = idx.split("<main", 1)
+          if len(parts) == 2 and "</main>" in parts[1]:
+              head = parts[0]
+              main = "<main" + parts[1]
+              main, after = main.split("</main>", 1)
+          else:
+              # Fallback: minimal shell if index structure changes
+              head = "<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>{}</title></head><body>".format(title)
+              after = "</body></html>"
+
+          # Build nav (prev + back to index). We'll add 'next' to prev file below.
+          nav_left = f'<a class="btn" href="{prev_slug}">← Chapter {prev_num}</a>' if prev_slug else "<span></span>"
+          nav_right = '<a class="btn" href="index.html">Back to Chapters</a>'
+          nav_html = f'<div class="nav">{nav_left}{nav_right}</div>'
+
+          chapter_html = f"""{head}
+<main class="container read"><div class="card">
+<h1>{title}</h1>
+{body_html}
+{nav_html}
+</div></main>{after}"""
+
+          (root/new_slug).write_text(chapter_html, encoding="utf-8")
+
+          # Update previous chapter with a "next" link, if any
+          if prev_slug and (root/prev_slug).exists():
+              prev_html = (root/prev_slug).read_text(encoding="utf-8")
+              # Try to insert 'next' link just before </main>
+              next_link = f'<a class="btn" href="{new_slug}">Next → Chapter {next_num}</a>'
+              if "</main>" in prev_html:
+                  # If previous already had a nav, try to augment the right side (simple heuristic)
+                  if '<div class="nav">' in prev_html:
+                      prev_html = prev_html.replace('</div></main>', f'{next_link}</div></main>')
+                  else:
+                      prev_html = prev_html.replace('</main>', f'<div class="nav"><span></span>{next_link}</div></main>')
+                  (root/prev_slug).write_text(prev_html, encoding="utf-8")
+
+          # Prepend a new card to index (newest first)
+          card = f'''
+  <div class="card">
+    <h3 style="margin:0 0 6px;"><a href="{new_slug}">{title}</a></h3>
+    <div class="meta">Added via Issue • chapter {next_num}</div>
+    <div style="margin-top:8px;"><a class="btn" href="{new_slug}">Read Chapter</a></div>
+  </div>
+          '''.strip()
+
+          new_index = idx.replace("</main>", card + "\n</main>")
+          (root/"index.html").write_text(new_index, encoding="utf-8")
+
+          print(f"Created {new_slug} (prev: {prev_slug or 'None'})")
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Add chapter from issue: ${{ github.event.issue.title }}" || echo "No changes"
+          git push
+
+      - name: Label done
+        if: always()
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: done
+
+      - name: Close issue
+        uses: peter-evans/close-issue@v3
+        with:
+          comment: "Chapter published ✅ — it’s live on GitHub Pages."
