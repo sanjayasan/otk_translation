@@ -1,88 +1,152 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Chapter 314 — Fallout — OTK — Translated Chapters (from 311)</title>
+<title>Chapter 314 — Fallout — OTK — Translated Chapters (Reader Mode)</title>
 <style>
-:root {
-  --bg: #0b0e13;
-  --fg: #e6ebf2;
-  --muted: #9aa6b2;
-  --link: #8ab4ff;
-  --card: #121722;
-  --accent: #7dd3fc;
-  --maxw: 860px;
-  --font: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --radius: 14px;
-  --border: rgba(255,255,255,.08);
+:root{
+  --bg:#0b0e13; --fg:#e6ebf2; --muted:#9aa6b2; --link:#8ab4ff; --card:#121722; --border:rgba(255,255,255,.08);
+  --maxw:900px;
+  --fs-base:18; /* px, will be applied via JS too */
+  --lh:1.7;
+  --font: Georgia, Cambria, "Times New Roman", Times, serif;
 }
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #ffffff;
-    --fg: #111827;
-    --muted: #6b7280;
-    --link: #1d4ed8;
-    --card: #f9fafb;
-    --border: rgba(0,0,0,.08);
-  }
+@media (prefers-color-scheme: light){
+  :root{ --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#1d4ed8; --card:#f9fafb; --border:rgba(0,0,0,.08); }
 }
-html.light {
-  --bg: #ffffff;
-  --fg: #111827;
-  --muted: #6b7280;
-  --link: #1d4ed8;
-  --card: #f9fafb;
-  --border: rgba(0,0,0,.08);
+html.light{ --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#1d4ed8; --card:#f9fafb; --border:rgba(0,0,0,.08); }
+
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:var(--font);
+  font-size: calc(var(--fs-base) * 1px);
+  line-height: var(--lh);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
-*{box-sizing:border-box;}
-body{margin:0;padding:0;background:var(--bg);color:var(--fg);
-  font-family:var(--font);line-height:1.7;font-size:clamp(17px,1.8vw,19px);}
-.header{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--card)85%,transparent);
-  backdrop-filter:blur(6px);border-bottom:1px solid var(--border);}
+.header{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--card) 85%, transparent);
+  backdrop-filter: blur(6px); border-bottom:1px solid var(--border);}
 .container{max-width:var(--maxw);margin:0 auto;padding:18px 14px;}
-h1,h2,h3{line-height:1.2;margin:.4em 0 .2em;}
-h1{font-size:clamp(24px,3vw,32px);}
-h2{font-size:clamp(16px,2vw,18px);color:var(--muted);font-weight:500;}
-a{color:var(--link);text-decoration:none;}
-a:hover{text-decoration:underline;}
-.card{background:var(--card);border:1px solid var(--border);
-  border-radius:14px;padding:clamp(14px,2.5vw,18px);margin:14px 0;}
-.meta{color:var(--muted);font-size:.95rem;}
-.nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px;flex-wrap:wrap;}
-.btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);
-  background:transparent;color:var(--fg);text-decoration:none;}
-.btn:hover{background:color-mix(in oklab,var(--card)60%,transparent);}
-.toolbar{display:flex;align-items:center;gap:10px;}
-footer{color:var(--muted);font-size:.9rem;padding:24px 16px 40px;text-align:center;}
-p{margin:0 0 1em;}
-hr{border:none;border-top:1px solid var(--border);margin:24px 0;}
-</style></head><body>
+h1,h2,h3{line-height:1.2;margin:.4em 0 .2em}
+h1{font-size: clamp(24px, 3.2vw, 34px)}
+h2{font-size: clamp(16px, 2vw, 18px); color: var(--muted); font-weight: 500}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:clamp(14px,2.2vw,20px);margin:14px 0}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.meta{color:var(--muted);font-size:.96rem}
+.btn{display:inline-block;padding:9px 12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--fg);text-decoration:none}
+.btn:hover{background:color-mix(in oklab,var(--card)65%,transparent)}
+.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.kbd{background:color-mix(in oklab,var(--card)70%,transparent);padding:2px 6px;border-radius:6px;border:1px solid var(--border);font-size:.9em}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}
+.read p{margin:0 0 1em;text-wrap:pretty}
+.controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+footer{color:var(--muted);font-size:.92rem;padding:24px 16px 40px;text-align:center}
+@media (max-width:540px){
+  .btn{padding:8px 10px}
+  .nav{gap:8px}
+}
+</style></head>
+<body>
 
 <div class="header">
   <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
     <div>
-      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (from 311)</h1></a>
-      <h2 style="margin:2px 0 0;">Comfortable English Translations • starting at Chapter 311</h2>
+      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (Reader Mode)</h1></a>
+      <h2 style="margin:2px 0 0;">Comfortable English Translations • reader controls included</h2>
     </div>
-    <div class="toolbar"><a id="themeToggle" class="btn" href="javascript:void(0)">Toggle Theme</a></div>
+    <div class="toolbar">
+      <a id="themeToggle" class="btn" href="javascript:void(0)">Theme</a>
+      <span class="meta">Font</span>
+      <div class="controls">
+        <a id="fsDec" class="btn" href="javascript:void(0)" title="Decrease font size">A−</a>
+        <a id="fsInc" class="btn" href="javascript:void(0)" title="Increase font size">A+</a>
+      </div>
+      <span class="meta">Spacing</span>
+      <div class="controls">
+        <a id="lhDec" class="btn" href="javascript:void(0)" title="Decrease line spacing">−</a>
+        <a id="lhInc" class="btn" href="javascript:void(0)" title="Increase line spacing">+</a>
+      </div>
+      <a id="resetPrefs" class="btn" href="javascript:void(0)" title="Reset typography">Reset</a>
+    </div>
   </div>
 </div>
 
-<main class="container read"><div class="card">
-<h1>Chapter 314 — Fallout</h1>
-<p>Emergency cabinet … Buyer traced via Golden Gate Korea — OTK … Fallout …</p>
-<div class="nav"><a class="btn" href="chapter-313.html">← Chapter 313 — The Print</a><span></span></div>
-</div></main>
-<footer>Built for comfortable reading on phone & desktop • Toggle light/dark in the header.<br>
-New chapter numbers will continue from 311 upward.</footer>
+<main class="container">
+  <div class="card read">
+    <div class="nav"><a class="btn" href="index.html">← Back to Chapters</a><span></span></div>
+    <h1 style="margin-top:.2em">Chapter 314 — Fallout</h1>
+    <p>An emergency cabinet meeting convened. GPIF CIO **Koji Namiki** sat among the ministers.</p>
+<p>“What happened? How big is the loss?” the Prime Minister demanded.<br>
+“At the close—**2.1 trillion yen**.”<br>
+Silence.</p>
+<p>“Where was the abnormal‑order detector?” the Finance Minister asked.<br>
+“Disabled during maintenance… and someone forgot to turn it back on.”<br>
+“The approval chain?”<br>
+“Cut from five to three steps for speed. It… also failed.”</p>
+<p>“Who bought the shares?”<br>
+“Golden Gate. We’re confirming the end client.”</p>
+<p>Namiki’s phone rang—Nishida. He listened, went pale. “Golden Gate *Korea*. Likely OTK Company.” Faces blanched around the room.</p>
+<p>They couldn’t legally freeze trades without damaging market credibility. Golden Gate was American; push too hard and Washington would push back. Even if they halted trading, the buyer could relay title across affiliates.</p>
+<p>“Even if it was a fat finger,” the Prime Minister muttered, “how did they hit *that* moment?”</p>
+<p>* * *</p>
+<p>After the mistaken orders were filled, Toyota drifted back to 145,000 and closed at 141,000. The Nikkei finished −1.24%. Europe wobbled. Headlines screamed: *Worst fat finger; 2.3T yen gone; pensions hit.* Forums exploded.</p>
+<p>* * *</p>
+<p>Hyun‑joo dragged us in. We explained time priority, size priority, and luck. “What now?” she asked.<br>
+“If we’re enemies anyway,” I said, “we do it properly.”</p>
+<p>Ambassador Tanokura slipped back into Seoul and demanded the trades be canceled “for the sake of relations.” Prime Minister Ryu listened, then said softly, “OTK is an American company. If you wish to protest… why are you here?”</p>
+    <div class="nav"><a class="btn" href="chapter-313.html">← Chapter 313 — The Print</a><span></span></div>
+  </div>
+</main>
+
+<footer>
+  Reader controls are saved in your browser • Use the header buttons for font size & line spacing • Toggle light/dark any time.
+</footer>
+
 <script>
 (function(){
-  const saved = localStorage.getItem('theme');
-  if(saved){ document.documentElement.classList.toggle('light', saved==='light'); }
+  // Theme
+  const savedTheme = localStorage.getItem('theme');
+  if(savedTheme){ document.documentElement.classList.toggle('light', savedTheme==='light'); }
+
+  // Typography prefs
+  const root = document.documentElement;
+  const savedFS = localStorage.getItem('fs-base');
+  const savedLH = localStorage.getItem('lh');
+  if(savedFS){ root.style.setProperty('--fs-base', savedFS); }
+  if(savedLH){ root.style.setProperty('--lh', savedLH); }
+
+  function setFS(val){
+    val = Math.max(14, Math.min(24, val)); // clamp 14–24px
+    root.style.setProperty('--fs-base', val);
+    localStorage.setItem('fs-base', String(val));
+  }
+  function setLH(val){
+    val = Math.max(1.4, Math.min(2.2, val)); // clamp 1.4–2.2
+    root.style.setProperty('--lh', val);
+    localStorage.setItem('lh', String(val));
+  }
+
   document.addEventListener('DOMContentLoaded',()=>{
-    const t=document.getElementById('themeToggle'); if(!t)return;
-    t.addEventListener('click',()=>{
-      const isLight=document.documentElement.classList.toggle('light');
-      localStorage.setItem('theme',isLight?'light':'dark');
-    });
+    // Theme toggle
+    const tog = document.getElementById('themeToggle');
+    if(tog){ tog.addEventListener('click',()=>{
+      const isLight = document.documentElement.classList.toggle('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });}
+
+    // Controls
+    const fsDec = document.getElementById('fsDec');
+    const fsInc = document.getElementById('fsInc');
+    const lhDec = document.getElementById('lhDec');
+    const lhInc = document.getElementById('lhInc');
+    const reset = document.getElementById('resetPrefs');
+    function getFS(){ return parseFloat(getComputedStyle(root).getPropertyValue('--fs-base')); }
+    function getLH(){ return parseFloat(getComputedStyle(root).getPropertyValue('--lh')); }
+    if(fsDec) fsDec.addOpenListener = fsDec.addEventListener('click', ()=> setFS(getFS()-1));
+    if(fsInc) fsInc.addEventListener('click', ()=> setFS(getFS()+1));
+    if(lhDec) lhDec.addEventListener('click', ()=> setLH(getLH()-0.1));
+    if(lhInc) lhInc.addEventListener('click', ()=> setLH(getLH()+0.1));
+    if(reset) reset.addEventListener('click', ()=> { setFS(18); setLH(1.7); });
   });
 })();
-</script></body></html>
+</script>
+</body></html>

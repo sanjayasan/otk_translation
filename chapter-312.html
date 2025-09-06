@@ -1,88 +1,157 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Chapter 312 — Fat Finger, GPIF, and a Plan — OTK — Translated Chapters (from 311)</title>
+<title>Chapter 312 — Fat Finger, GPIF, and a Plan — OTK — Translated Chapters (Reader Mode)</title>
 <style>
-:root {
-  --bg: #0b0e13;
-  --fg: #e6ebf2;
-  --muted: #9aa6b2;
-  --link: #8ab4ff;
-  --card: #121722;
-  --accent: #7dd3fc;
-  --maxw: 860px;
-  --font: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --radius: 14px;
-  --border: rgba(255,255,255,.08);
+:root{
+  --bg:#0b0e13; --fg:#e6ebf2; --muted:#9aa6b2; --link:#8ab4ff; --card:#121722; --border:rgba(255,255,255,.08);
+  --maxw:900px;
+  --fs-base:18; /* px, will be applied via JS too */
+  --lh:1.7;
+  --font: Georgia, Cambria, "Times New Roman", Times, serif;
 }
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #ffffff;
-    --fg: #111827;
-    --muted: #6b7280;
-    --link: #1d4ed8;
-    --card: #f9fafb;
-    --border: rgba(0,0,0,.08);
-  }
+@media (prefers-color-scheme: light){
+  :root{ --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#1d4ed8; --card:#f9fafb; --border:rgba(0,0,0,.08); }
 }
-html.light {
-  --bg: #ffffff;
-  --fg: #111827;
-  --muted: #6b7280;
-  --link: #1d4ed8;
-  --card: #f9fafb;
-  --border: rgba(0,0,0,.08);
+html.light{ --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#1d4ed8; --card:#f9fafb; --border:rgba(0,0,0,.08); }
+
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:var(--font);
+  font-size: calc(var(--fs-base) * 1px);
+  line-height: var(--lh);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
-*{box-sizing:border-box;}
-body{margin:0;padding:0;background:var(--bg);color:var(--fg);
-  font-family:var(--font);line-height:1.7;font-size:clamp(17px,1.8vw,19px);}
-.header{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--card)85%,transparent);
-  backdrop-filter:blur(6px);border-bottom:1px solid var(--border);}
+.header{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--card) 85%, transparent);
+  backdrop-filter: blur(6px); border-bottom:1px solid var(--border);}
 .container{max-width:var(--maxw);margin:0 auto;padding:18px 14px;}
-h1,h2,h3{line-height:1.2;margin:.4em 0 .2em;}
-h1{font-size:clamp(24px,3vw,32px);}
-h2{font-size:clamp(16px,2vw,18px);color:var(--muted);font-weight:500;}
-a{color:var(--link);text-decoration:none;}
-a:hover{text-decoration:underline;}
-.card{background:var(--card);border:1px solid var(--border);
-  border-radius:14px;padding:clamp(14px,2.5vw,18px);margin:14px 0;}
-.meta{color:var(--muted);font-size:.95rem;}
-.nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px;flex-wrap:wrap;}
-.btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);
-  background:transparent;color:var(--fg);text-decoration:none;}
-.btn:hover{background:color-mix(in oklab,var(--card)60%,transparent);}
-.toolbar{display:flex;align-items:center;gap:10px;}
-footer{color:var(--muted);font-size:.9rem;padding:24px 16px 40px;text-align:center;}
-p{margin:0 0 1em;}
-hr{border:none;border-top:1px solid var(--border);margin:24px 0;}
-</style></head><body>
+h1,h2,h3{line-height:1.2;margin:.4em 0 .2em}
+h1{font-size: clamp(24px, 3.2vw, 34px)}
+h2{font-size: clamp(16px, 2vw, 18px); color: var(--muted); font-weight: 500}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:clamp(14px,2.2vw,20px);margin:14px 0}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.meta{color:var(--muted);font-size:.96rem}
+.btn{display:inline-block;padding:9px 12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--fg);text-decoration:none}
+.btn:hover{background:color-mix(in oklab,var(--card)65%,transparent)}
+.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.kbd{background:color-mix(in oklab,var(--card)70%,transparent);padding:2px 6px;border-radius:6px;border:1px solid var(--border);font-size:.9em}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}
+.read p{margin:0 0 1em;text-wrap:pretty}
+.controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+footer{color:var(--muted);font-size:.92rem;padding:24px 16px 40px;text-align:center}
+@media (max-width:540px){
+  .btn{padding:8px 10px}
+  .nav{gap:8px}
+}
+</style></head>
+<body>
 
 <div class="header">
   <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
     <div>
-      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (from 311)</h1></a>
-      <h2 style="margin:2px 0 0;">Comfortable English Translations • starting at Chapter 311</h2>
+      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (Reader Mode)</h1></a>
+      <h2 style="margin:2px 0 0;">Comfortable English Translations • reader controls included</h2>
     </div>
-    <div class="toolbar"><a id="themeToggle" class="btn" href="javascript:void(0)">Toggle Theme</a></div>
+    <div class="toolbar">
+      <a id="themeToggle" class="btn" href="javascript:void(0)">Theme</a>
+      <span class="meta">Font</span>
+      <div class="controls">
+        <a id="fsDec" class="btn" href="javascript:void(0)" title="Decrease font size">A−</a>
+        <a id="fsInc" class="btn" href="javascript:void(0)" title="Increase font size">A+</a>
+      </div>
+      <span class="meta">Spacing</span>
+      <div class="controls">
+        <a id="lhDec" class="btn" href="javascript:void(0)" title="Decrease line spacing">−</a>
+        <a id="lhInc" class="btn" href="javascript:void(0)" title="Increase line spacing">+</a>
+      </div>
+      <a id="resetPrefs" class="btn" href="javascript:void(0)" title="Reset typography">Reset</a>
+    </div>
   </div>
 </div>
 
-<main class="container read"><div class="card">
-<h1>Chapter 312 — Fat Finger, GPIF, and a Plan</h1>
-<p>OTK’s “shareholders’ meeting” … track GPIF stake … strike in real time.</p>
-<div class="nav"><a class="btn" href="chapter-311.html">← Chapter 311 — The Offer, the Crash, and a Puzzling Vision</a><a class="btn" href="chapter-313.html">Chapter 313 — The Print →</a></div>
-</div></main>
-<footer>Built for comfortable reading on phone & desktop • Toggle light/dark in the header.<br>
-New chapter numbers will continue from 311 upward.</footer>
+<main class="container">
+  <div class="card read">
+    <div class="nav"><a class="btn" href="index.html">← Back to Chapters</a><span></span></div>
+    <h1 style="margin-top:.2em">Chapter 312 — Fat Finger, GPIF, and a Plan</h1>
+    <p>We held an OTK “shareholders’ meeting,” which meant just the two of us.</p>
+<p>“Why buy Toyota?”<br>
+“Partnership, maybe. Like Geely buying ten percent of Daimler.”<br>
+“With Toyota?”</p>
+<p>Japan’s firms had formed a government‑backed Auto Alliance—Toyota, Honda, Softbox, Sony, Toshiba—everyone. Toyota led it. Us teaming up with Toyota? Nearly zero chance.</p>
+<p>“Anyway, 14.97 million shares for 14.97 million yen means one yen per share. That’s nonsense.”<br>
+“Unless someone fat‑fingered it.”</p>
+<p>I ran through famous blunders: the 2010 flash crash; Japan 2015—63,000 shares sold for 1 yen by mistake; Seosung’s ghost‑share fiasco; Hansu Securities’ options disaster—Japan’s Supreme Court ultimately ruling that “a filled trade is final.”</p>
+<p>Who even *has* fourteen‑point‑nine‑seven million Toyota shares to dump at once? Only one: Japan’s public pension—GPIF—with its domestic equities routed increasingly through Nishida Securities, whose ownership was tangled with the First Lady’s clan.</p>
+<p>The plan formed.</p>
+<p>“No pre‑bids. Looks like collusion,” I said. “We wait and strike in real time.”</p>
+<p>We tracked disclosures. GPIF’s Toyota stake slid toward 15 million. When it dipped below… that would be our window.</p>
+<p>* * *</p>
+<p>I wrestled with the ethics. “It isn’t illegal. But it *is* predatory.”<br>
+“Someone will buy it if we don’t,” Taek‑gyu said.<br>
+TV blared: Japan recalled its ambassador from Seoul over the court rulings and comfort‑women issue; politicians spat venom. Protesters waved Rising Sun flags and called me a murderer on NHK.</p>
+<p>“Still think we should worry about their feelings?” he said.</p>
+<p>I looked at Okazaki on the screen. *If they sell cheap, we buy.*</p>
+<p>* * *</p>
+<p>We cleared our calendars. I pre‑filled the order ticket so one keypress would fire. Japan’s market broke for lunch; Korea’s did not. We watched both sessions, every tick.</p>
+<p>GPIF’s stake finally fell *under* fifteen million.</p>
+<p>“Any day now,” I said.</p>
+<p>Days passed. We stared till our eyes burned. With twenty minutes left one afternoon, I couldn’t hold it. “Bathroom. Don’t blink.”<br>
+“Got it,” he said, finger poised over Enter.</p>
+    <div class="nav"><a class="btn" href="chapter-311.html">← Chapter 311 — The Offer, the Crash, and a Puzzling Vision</a><a class="btn" href="chapter-313.html">Chapter 313 — The Print →</a></div>
+  </div>
+</main>
+
+<footer>
+  Reader controls are saved in your browser • Use the header buttons for font size & line spacing • Toggle light/dark any time.
+</footer>
+
 <script>
 (function(){
-  const saved = localStorage.getItem('theme');
-  if(saved){ document.documentElement.classList.toggle('light', saved==='light'); }
+  // Theme
+  const savedTheme = localStorage.getItem('theme');
+  if(savedTheme){ document.documentElement.classList.toggle('light', savedTheme==='light'); }
+
+  // Typography prefs
+  const root = document.documentElement;
+  const savedFS = localStorage.getItem('fs-base');
+  const savedLH = localStorage.getItem('lh');
+  if(savedFS){ root.style.setProperty('--fs-base', savedFS); }
+  if(savedLH){ root.style.setProperty('--lh', savedLH); }
+
+  function setFS(val){
+    val = Math.max(14, Math.min(24, val)); // clamp 14–24px
+    root.style.setProperty('--fs-base', val);
+    localStorage.setItem('fs-base', String(val));
+  }
+  function setLH(val){
+    val = Math.max(1.4, Math.min(2.2, val)); // clamp 1.4–2.2
+    root.style.setProperty('--lh', val);
+    localStorage.setItem('lh', String(val));
+  }
+
   document.addEventListener('DOMContentLoaded',()=>{
-    const t=document.getElementById('themeToggle'); if(!t)return;
-    t.addEventListener('click',()=>{
-      const isLight=document.documentElement.classList.toggle('light');
-      localStorage.setItem('theme',isLight?'light':'dark');
-    });
+    // Theme toggle
+    const tog = document.getElementById('themeToggle');
+    if(tog){ tog.addEventListener('click',()=>{
+      const isLight = document.documentElement.classList.toggle('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });}
+
+    // Controls
+    const fsDec = document.getElementById('fsDec');
+    const fsInc = document.getElementById('fsInc');
+    const lhDec = document.getElementById('lhDec');
+    const lhInc = document.getElementById('lhInc');
+    const reset = document.getElementById('resetPrefs');
+    function getFS(){ return parseFloat(getComputedStyle(root).getPropertyValue('--fs-base')); }
+    function getLH(){ return parseFloat(getComputedStyle(root).getPropertyValue('--lh')); }
+    if(fsDec) fsDec.addOpenListener = fsDec.addEventListener('click', ()=> setFS(getFS()-1));
+    if(fsInc) fsInc.addEventListener('click', ()=> setFS(getFS()+1));
+    if(lhDec) lhDec.addEventListener('click', ()=> setLH(getLH()-0.1));
+    if(lhInc) lhInc.addEventListener('click', ()=> setLH(getLH()+0.1));
+    if(reset) reset.addEventListener('click', ()=> { setFS(18); setLH(1.7); });
   });
 })();
-</script></body></html>
+</script>
+</body></html>

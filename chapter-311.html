@@ -1,88 +1,169 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Chapter 311 — The Offer, the Crash, and a Puzzling Vision — OTK — Translated Chapters (from 311)</title>
+<title>Chapter 311 — The Offer, the Crash, and a Puzzling Vision — OTK — Translated Chapters (Reader Mode)</title>
 <style>
-:root {
-  --bg: #0b0e13;
-  --fg: #e6ebf2;
-  --muted: #9aa6b2;
-  --link: #8ab4ff;
-  --card: #121722;
-  --accent: #7dd3fc;
-  --maxw: 860px;
-  --font: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --radius: 14px;
-  --border: rgba(255,255,255,.08);
+:root{
+  --bg:#0b0e13; --fg:#e6ebf2; --muted:#9aa6b2; --link:#8ab4ff; --card:#121722; --border:rgba(255,255,255,.08);
+  --maxw:900px;
+  --fs-base:18; /* px, will be applied via JS too */
+  --lh:1.7;
+  --font: Georgia, Cambria, "Times New Roman", Times, serif;
 }
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #ffffff;
-    --fg: #111827;
-    --muted: #6b7280;
-    --link: #1d4ed8;
-    --card: #f9fafb;
-    --border: rgba(0,0,0,.08);
-  }
+@media (prefers-color-scheme: light){
+  :root{ --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#1d4ed8; --card:#f9fafb; --border:rgba(0,0,0,.08); }
 }
-html.light {
-  --bg: #ffffff;
-  --fg: #111827;
-  --muted: #6b7280;
-  --link: #1d4ed8;
-  --card: #f9fafb;
-  --border: rgba(0,0,0,.08);
+html.light{ --bg:#ffffff; --fg:#111827; --muted:#6b7280; --link:#1d4ed8; --card:#f9fafb; --border:rgba(0,0,0,.08); }
+
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:var(--font);
+  font-size: calc(var(--fs-base) * 1px);
+  line-height: var(--lh);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
 }
-*{box-sizing:border-box;}
-body{margin:0;padding:0;background:var(--bg);color:var(--fg);
-  font-family:var(--font);line-height:1.7;font-size:clamp(17px,1.8vw,19px);}
-.header{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--card)85%,transparent);
-  backdrop-filter:blur(6px);border-bottom:1px solid var(--border);}
+.header{position:sticky;top:0;z-index:10;background:color-mix(in oklab,var(--card) 85%, transparent);
+  backdrop-filter: blur(6px); border-bottom:1px solid var(--border);}
 .container{max-width:var(--maxw);margin:0 auto;padding:18px 14px;}
-h1,h2,h3{line-height:1.2;margin:.4em 0 .2em;}
-h1{font-size:clamp(24px,3vw,32px);}
-h2{font-size:clamp(16px,2vw,18px);color:var(--muted);font-weight:500;}
-a{color:var(--link);text-decoration:none;}
-a:hover{text-decoration:underline;}
-.card{background:var(--card);border:1px solid var(--border);
-  border-radius:14px;padding:clamp(14px,2.5vw,18px);margin:14px 0;}
-.meta{color:var(--muted);font-size:.95rem;}
-.nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px;flex-wrap:wrap;}
-.btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);
-  background:transparent;color:var(--fg);text-decoration:none;}
-.btn:hover{background:color-mix(in oklab,var(--card)60%,transparent);}
-.toolbar{display:flex;align-items:center;gap:10px;}
-footer{color:var(--muted);font-size:.9rem;padding:24px 16px 40px;text-align:center;}
-p{margin:0 0 1em;}
-hr{border:none;border-top:1px solid var(--border);margin:24px 0;}
-</style></head><body>
+h1,h2,h3{line-height:1.2;margin:.4em 0 .2em}
+h1{font-size: clamp(24px, 3.2vw, 34px)}
+h2{font-size: clamp(16px, 2vw, 18px); color: var(--muted); font-weight: 500}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:clamp(14px,2.2vw,20px);margin:14px 0}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+.meta{color:var(--muted);font-size:.96rem}
+.btn{display:inline-block;padding:9px 12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--fg);text-decoration:none}
+.btn:hover{background:color-mix(in oklab,var(--card)65%,transparent)}
+.toolbar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.kbd{background:color-mix(in oklab,var(--card)70%,transparent);padding:2px 6px;border-radius:6px;border:1px solid var(--border);font-size:.9em}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}
+.read p{margin:0 0 1em;text-wrap:pretty}
+.controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+footer{color:var(--muted);font-size:.92rem;padding:24px 16px 40px;text-align:center}
+@media (max-width:540px){
+  .btn{padding:8px 10px}
+  .nav{gap:8px}
+}
+</style></head>
+<body>
 
 <div class="header">
   <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
     <div>
-      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (from 311)</h1></a>
-      <h2 style="margin:2px 0 0;">Comfortable English Translations • starting at Chapter 311</h2>
+      <a href="index.html" style="text-decoration:none;"><h1 style="margin:0;">OTK — Translated Chapters (Reader Mode)</h1></a>
+      <h2 style="margin:2px 0 0;">Comfortable English Translations • reader controls included</h2>
     </div>
-    <div class="toolbar"><a id="themeToggle" class="btn" href="javascript:void(0)">Toggle Theme</a></div>
+    <div class="toolbar">
+      <a id="themeToggle" class="btn" href="javascript:void(0)">Theme</a>
+      <span class="meta">Font</span>
+      <div class="controls">
+        <a id="fsDec" class="btn" href="javascript:void(0)" title="Decrease font size">A−</a>
+        <a id="fsInc" class="btn" href="javascript:void(0)" title="Increase font size">A+</a>
+      </div>
+      <span class="meta">Spacing</span>
+      <div class="controls">
+        <a id="lhDec" class="btn" href="javascript:void(0)" title="Decrease line spacing">−</a>
+        <a id="lhInc" class="btn" href="javascript:void(0)" title="Increase line spacing">+</a>
+      </div>
+      <a id="resetPrefs" class="btn" href="javascript:void(0)" title="Reset typography">Reset</a>
+    </div>
   </div>
 </div>
 
-<main class="container read"><div class="card">
-<h1>Chapter 311 — The Offer, the Crash, and a Puzzling Vision</h1>
-<p>Ellie tilted her head … foresight: “OTK will acquire 14.97M Toyota shares …”</p>
-<div class="nav"><span></span><a class="btn" href="chapter-312.html">Chapter 312 — Fat Finger, GPIF, and a Plan →</a></div>
-</div></main>
-<footer>Built for comfortable reading on phone & desktop • Toggle light/dark in the header.<br>
-New chapter numbers will continue from 311 upward.</footer>
+<main class="container">
+  <div class="card read">
+    <div class="nav"><a class="btn" href="index.html">← Back to Chapters</a><span></span></div>
+    <h1 style="margin-top:.2em">Chapter 311 — The Offer, the Crash, and a Puzzling Vision</h1>
+    <p>Ellie tilted her head at my question.<br>
+“Well… it’s such a sudden proposal, I don’t know what to say.”</p>
+<p>After finishing her meal, Hyun‑joo noona explained while chewing nicotine gum instead of lighting a cigarette.<br>
+“Originally, we were about to sign with Catherine Tyler, the Hollywood actress. Everything was nearly finalized. But then the president saw Ellie, got completely smitten, and changed his mind.”</p>
+<p>Apparently, top domestic stars and Hollywood names command similar fees for commercials.</p>
+<p>I looked at Taek‑gyu. “What do you think?”<br>
+He blinked. “Why are you asking me?”<br>
+“I dunno. Lately you’ve been on a roll.”</p>
+<p>I asked Hyun‑joo, “If Ellie accepts, does Golden Gate get the IPO lead?”<br>
+“Most likely. Their terms and ours aren’t far apart.”<br>
+“If the offering is 300 billion won, the fee alone is big.”<br>
+“We’re taking warrants instead of fees.”<br>
+“At the offer price?”<br>
+“At the offer price.”</p>
+<p>It saves the company cash; the bank makes more if the stock rises. “And if it drops below the offer?” she smirked. “Then we chalk it up to charity.”</p>
+<p>Ellie said, “I think it’s still worth doing. It’s a big fish in a quiet IPO market.”</p>
+<p>She liked sports and diving; the brand fit. “As long as it’s not a bikini shoot—”<br>
+“No worries,” Hyun‑joo said. “That’s not their main product.”<br>
+Ellie hesitated. “I don’t know if I’d be good. But part of me wants to leave pretty photos while I’m still young.”</p>
+<p>In the end she accepted, and Golden Gate Korea beat KYB to become Vester’s underwriter.</p>
+<p>* * *</p>
+<p>After Christmas, year‑end season began—but the vibe was grim. Domestic demand was weak, the news bleaker. The biggest issue: Korea–Japan relations.</p>
+<p>Seoul scrapped the comfort‑women deal, and Korea’s Supreme Court held Japanese firms liable for forced labor. Tokyo erupted. Foreign Minister Okamoto thundered that treaties were “final” and “irreversible,” and threatened retaliation.</p>
+<p>Currency‑swap talks froze amid insults. “Korea breaks treaties whenever it likes,” the finance minister sneered.</p>
+<p>Then an incident: 2:30 a.m. in Chicago, a drunk Japanese student, Yoshizawa Masao, darted into traffic. An AD1 in autonomous mode braked and swerved, but hit him. He died en route to the hospital.</p>
+<p>The car had a green light and was cruising steadily. The insurer placed 100% fault on the pedestrian. It should have ended there—but Japanese media made it a referendum on autonomy.</p>
+<p>Toyota’s chairman declared, “Imperfect technology is a lethal weapon.” In the U.S., testers replicated the event: even knowing a person would dash out, it was unavoidable. The released dashcam convinced most viewers.</p>
+<p>Yet the Japanese government demanded Karos release data and algorithms.</p>
+<p>As we debated a response, a vision flashed before my eyes.</p>
+<p>When I came to, Taek‑gyu was staring. “What did the foresight say?”<br>
+“OTK will acquire 14,970,000 Toyota shares for 14,970,000 yen.”<br>
+“How many shares does Toyota have outstanding?”</p>
+<p>I checked: 149,582,550. If we bought 14.97 million, that was over 10%—the top shareholder, instantly.</p>
+<p>But how could ten percent cost only 14.97 million *yen*? About 170 million won?</p>
+<p>“…Unless it’s a typo,” he said.</p>
+<p>And the word came to me: “Fat finger.”</p>
+    <div class="nav"><span></span><a class="btn" href="chapter-312.html">Chapter 312 — Fat Finger, GPIF, and a Plan →</a></div>
+  </div>
+</main>
+
+<footer>
+  Reader controls are saved in your browser • Use the header buttons for font size & line spacing • Toggle light/dark any time.
+</footer>
+
 <script>
 (function(){
-  const saved = localStorage.getItem('theme');
-  if(saved){ document.documentElement.classList.toggle('light', saved==='light'); }
+  // Theme
+  const savedTheme = localStorage.getItem('theme');
+  if(savedTheme){ document.documentElement.classList.toggle('light', savedTheme==='light'); }
+
+  // Typography prefs
+  const root = document.documentElement;
+  const savedFS = localStorage.getItem('fs-base');
+  const savedLH = localStorage.getItem('lh');
+  if(savedFS){ root.style.setProperty('--fs-base', savedFS); }
+  if(savedLH){ root.style.setProperty('--lh', savedLH); }
+
+  function setFS(val){
+    val = Math.max(14, Math.min(24, val)); // clamp 14–24px
+    root.style.setProperty('--fs-base', val);
+    localStorage.setItem('fs-base', String(val));
+  }
+  function setLH(val){
+    val = Math.max(1.4, Math.min(2.2, val)); // clamp 1.4–2.2
+    root.style.setProperty('--lh', val);
+    localStorage.setItem('lh', String(val));
+  }
+
   document.addEventListener('DOMContentLoaded',()=>{
-    const t=document.getElementById('themeToggle'); if(!t)return;
-    t.addEventListener('click',()=>{
-      const isLight=document.documentElement.classList.toggle('light');
-      localStorage.setItem('theme',isLight?'light':'dark');
-    });
+    // Theme toggle
+    const tog = document.getElementById('themeToggle');
+    if(tog){ tog.addEventListener('click',()=>{
+      const isLight = document.documentElement.classList.toggle('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });}
+
+    // Controls
+    const fsDec = document.getElementById('fsDec');
+    const fsInc = document.getElementById('fsInc');
+    const lhDec = document.getElementById('lhDec');
+    const lhInc = document.getElementById('lhInc');
+    const reset = document.getElementById('resetPrefs');
+    function getFS(){ return parseFloat(getComputedStyle(root).getPropertyValue('--fs-base')); }
+    function getLH(){ return parseFloat(getComputedStyle(root).getPropertyValue('--lh')); }
+    if(fsDec) fsDec.addOpenListener = fsDec.addEventListener('click', ()=> setFS(getFS()-1));
+    if(fsInc) fsInc.addEventListener('click', ()=> setFS(getFS()+1));
+    if(lhDec) lhDec.addEventListener('click', ()=> setLH(getLH()-0.1));
+    if(lhInc) lhInc.addEventListener('click', ()=> setLH(getLH()+0.1));
+    if(reset) reset.addEventListener('click', ()=> { setFS(18); setLH(1.7); });
   });
 })();
-</script></body></html>
+</script>
+</body></html>
